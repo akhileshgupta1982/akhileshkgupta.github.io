@@ -1,0 +1,46 @@
+{
+
+   "details": [
+       {
+			"Experiment": "To study single phase fully controlled bridge rectifiers with resistive and inductive loads.",     
+			"Lab": "Power Electronics",               
+			"Discipline": "Electrical Engineering",				 
+			"Technology": "Engineering"         
+       }
+   ],
+
+   "developer": [
+       {       
+      "Developer": "Dr. Akhilesh Kumar Gupta",         
+      "Institute": "B. N. College Of Engineering And Technology, Lucknow",         
+      "InstituteAcronym": "BNCET"   
+       }
+   ],
+
+   "contributer": [
+       {       
+			"Contributer": "Adab Ishtiaq",             
+      "Institute": "B. N. College Of Engineering And Technology, Lucknow",               
+			"InstituteAcronym": "BNCET"         
+       },
+
+       {       
+			"Contributer": "Sakshi Agarwal",              
+      "Institute": "B. N. College Of Engineering And Technology, Lucknow",               
+			"InstituteAcronym": "BNCET"         
+       },
+
+       {       
+			"Contributer": "Anuj",             
+      "Institute": "B. N. College Of Engineering And Technology, Lucknow",               
+			"InstituteAcronym": "BNCET"         
+       },
+
+       {       
+			"Contributer": "Rupali Srivastava",              
+      "Institute": "B. N. College Of Engineering And Technology, Lucknow",               
+			"InstituteAcronym": "BNCET"         
+       }
+   ]
+
+}

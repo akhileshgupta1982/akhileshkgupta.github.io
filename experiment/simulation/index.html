@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simulator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <script type="text/javascript" src="Working_operation.js"></script>
+  <script type="text/javascript" src="Parameter_change.js"></script>
+  <script type="text/javascript" src="calculation.js"></script>
+
+</head>
+<body>
+  <div class="bg-image"></div>
+  <div class="container-fluid wholebody">
+    <div class="header_heading col-sm-12 no-gutter p-4">
+      <h5 class="headingtext">To study single phase fully controlled bridge rectifiers with resistive and inductive loads</h5>
+    </div>
+    <!--  3 columns -->
+    <div class="row no-gutter">
+
+      <div class="col-sm-6 leftside">
+        <div class="lefttop">
+          <div class="heading dropdown">
+            <p class="sub_heading"> INSTRUCTION</p>
+                    		<div class="dropdown-content">
+                        		<ol type="1">
+								<li>Go to theory section and after reading theory click on next button to understand the operating principle with R load by visual effect.</li>
+<li>After completion of theory, go to calculation section and provide inputs.</li>
+<li>Click on Average_Voltage button.</li>
+<li>Click on RMS_Voltage.</li>
+<li>Analyse the effect of firing angle on output.</li>
+<li>Click on RL load button at the top right corner to toggle the window to RL load page.</li>
+</ol> 
+                    		</div>
+                   </div>
+        </div>
+        <br>
+        <div class="leftcntr">
+          <div class="heading">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item sub_heading">Theory</li>
+              <li class="list-group-item" style="float: right; margin-top: -5px; right: 90px; position: absolute; background-color: inherit; border: none;">
+                <button style="width: 80px; height: 30px; display: none;" class="btn btn-outline-primary" onClick="Theoryprev()">Prev</button>
+              </li>
+              <li class="list-group-item" style="float: right; margin-top: -5px; right: 5px; position: absolute; background-color: inherit; border: none;">
+                <button style="width: 80px; height: 30px;" class="btn btn-outline-primary" onClick="Theory()">Next</button>
+              </li>  
+            </ul>
+          </div>
+          <div id="Theory" class="tBox">
+            <p>
+              Most commonly used controlled rectifier for the speed control of DC machine is single phase fully controlled rectifier. The circuit diagram of fully controlled rectifier with R load and corresponding output waveform is shown in figure. To understand the working of this circuit, click on next button. The average DC load voltage in fully controlled rectifier is controlled by the controlling the firing angle (α) for the two transistors in per half cycle. 
+            </p>
+          </div>
+        </div>
+        <br>
+        <div class="leftbottom">
+          <div class="heading">
+            <p class="sub_heading">Calculation
+            </p>
+          </div>
+          <div class="cktbox col-sm-12" style="border: 1px solid black; background-color: inherit; color: white;">
+            <table class="table table-borderless table-hover" style="color: white; font-size: 16px;">
+              <tbody>
+                <form name="myForm" method = "get">
+                  <tr>
+                    <td>V<sub>m</sub> (V) Peak Voltage</td>
+                    <td><input type="text" orient="vertical" id="Vp" min="10" max="450" step='5' value="10"  oninput="Vchange()" enabled=true;><label id="Voltage_amplitude">V</label></td>
+                  </tr>
+                  <tr>
+                    <td>Firing angle &#945 </td>
+                    <td><input type="text" orient="vertical" id="FA" min="0" max="120" step='1' value="0" oninput="FAG()" placeholder="Firing angle (0)enabled=true">
+                           <label id="FAN">Degree</label></td>
+                  </tr>
+                  <tr>
+                    <td>f<sub>o</sub> (Hz) Sine frequency</td>
+                    <td><input type="text" orient="vertical" id="fo" min="20" max="100" step='5' value="20" size = "4" oninput="Frq()" enabled=true;><label id="Frequency">Hz</label></td>
+                  </tr>
+                  <tr>
+                    
+                    <td>Enter Average Voltage</td>
+					<td>
+                      <input type = "text" id = "Average_Voltage1"  oninput = "check();" ><label id="Average_Voltage11">V</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> &nbsp; &nbsp; &nbsp;<input type = "button" value = "Average_Voltage"  onclick = "V_avg();" class="btn btn-outline-success"></td>
+                    
+					<td> &nbsp; &nbsp; &nbsp;<output name = "Average_Voltage"></output></td>
+					<td><input type="button" class="btn btn-outline-primary" value="Print" onclick="window.print()"></td>
+                  </tr>
+                                 </form>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 rightside">
+        <div class="righttop">
+          <div class="heading">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item sub_heading">Circuit
+              </li>
+              <li class="list-group-item" style="float: right; margin-top: -5px; right: 5px; position: absolute; background-color: inherit; border: none;">
+                For RL load study <a style="width: 120px; height: 30px;" class="btn btn-outline-primary" target="_self" href="home1.html">Click here</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card cktboxtop">
+            <!--<img id="FWR" class="cktdiagram" src="FWR.png">-->
+            <img class="im" id="FWR" src="FWR.png" alt="Avatar" style="width:100%; height: 100%; position: absolute;">
+          </div>
+        </div>
+        <br>
+        <div class="rightbottom">
+          <div class="heading">
+            <p class="sub_heading">Output Graph
+            </p>
+          </div>
+          <div class="card cktbox">
+            <!--<img id="FWR" class="cktdiagram" src="FWR.png">-->
+            <img class="im" id="FWR_O" src="output.png" alt="Avatar" style="width:100%; height: 100%; position: absolute;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Mr. Nobody -->
+</body>
+</html>

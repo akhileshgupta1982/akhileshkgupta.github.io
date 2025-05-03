@@ -1,0 +1,167 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image 
+{
+  background-image: url("top-lab-sm-01.jpg");
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  height: 100vh; 
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+.wholebody
+{
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-top: 0px;
+    text-align: justify;
+    overflow: auto;
+}
+
+.header_heading
+{
+	background-color: inherit;
+}
+
+.headingtext
+{
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(to right, #30CFD0 0%, #f2f7f3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sub_heading
+{
+	text-align: left;
+	font-size: 20px;
+	color: white;
+	margin-left: 10px;
+	padding: 5px;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+
+.leftside,.center,.rightside
+{
+	background-color: inherit;
+}
+
+.lefttop,.leftcntr,.leftbottom,.righttop,.rightbottom
+{
+    font-size: 16px;
+    background-color: inherit;
+    width: 100%;
+    height: 350px;
+    font-weight: bold;
+    border: 2px solid #03323b;
+}
+
+.lefttop
+{
+	height: 40px;
+	border: 0px solid #03323b;
+}
+
+.leftcntr
+{
+	height: 290px;
+	font-size: 10px;
+}
+
+.leftbottom
+{
+	height: 350px;
+	font-size: 10px;
+}
+
+.heading
+{
+    width: 100%;
+    background-color: #071c26;
+    color: white;
+}
+
+.tBox
+{
+	margin-top: 0px;
+	width: 100%;
+	height: 85%;
+	background-color: inherit;
+	font-size: 16px;
+	overflow: auto;
+}
+
+.cktboxtop
+{
+  margin-top: 0px;
+  height: 88%;
+  background-color: inherit;
+}
+
+.cktbox
+{
+	margin-top: -15px;
+	height: 89%;
+	background-color: inherit;
+  overflow: auto;
+}
+
+.cktdiagram
+{
+	width: 100%;
+	height: 100%;
+}
+
+td
+{
+	text-align: left;
+}
+
+li
+{
+	background-color: inherit;
+}
+
+.dropdown-content 
+{
+   position: absolute;
+   background-color: grey;
+   border: 2px solid #3333ff;;
+   min-width: 450px;
+   top: 40px;
+   width: 90%;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   padding: 12px 16px;
+   z-index: 1;
+   display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
